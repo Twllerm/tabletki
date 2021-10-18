@@ -1,4 +1,6 @@
 import { Router } from "express";
+import { channelsRouter } from "./channels";
+import { usersRouter } from "./users-routes";
 
 // User-route
 // const userRouter = Router();
@@ -9,6 +11,9 @@ import { Router } from "express";
 
 // Export the base-router
 const baseRouter = Router();
+
+baseRouter.use("/channels", channelsRouter);
+baseRouter.use("/users", usersRouter);
 
 // baseRouter.use('/users', userRouter);
 
